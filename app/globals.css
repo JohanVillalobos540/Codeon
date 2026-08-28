@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #e2e8f0; /* Ice White */
+  --color-accent-hover: #cbd5e1; /* Slightly darker grey for hover */
+  --color-accent-glow: rgba(226, 232, 240, 0.15);
+  
+  --color-background: #000000; /* Absolute Black */
+  --color-foreground: #ffffff; /* Pure White */
+  --color-muted: #a1a1aa; /* Zinc 400 */
+  
+  --color-surface: #152242; /* Space Indigo touches */
+  --color-surface-hover: #1D2F58;
+  --color-surface-border: #27272a; /* Zinc 800 for subtle borders */
+
+  --font-sans: var(--font-inter), sans-serif;
+  
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
